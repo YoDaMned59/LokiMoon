@@ -78,6 +78,7 @@ const ContactForm = () => {
         gdprConsent: false
       })
     } catch (error) {
+      console.error('Erreur lors de l\'envoi du formulaire :', error)
       setSubmitStatus({
         type: 'error',
         message: 'Une erreur est survenue. Veuillez réessayer.'
