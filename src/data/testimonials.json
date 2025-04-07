@@ -1,0 +1,32 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Marie L.",
+      "text": "Une expérience unique qui m'a permis de mieux me comprendre. Les conseils reçus ont été précieux pour prendre une décision importante dans ma vie.",
+      "service": "Tirage de Cartes",
+      "date": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Jean P.",
+      "text": "Des conseils précieux qui ont changé ma perspective. La consultation était très professionnelle et bienveillante.",
+      "service": "Consultation Spirituelle",
+      "date": "2024-02-01"
+    },
+    {
+      "id": 3,
+      "name": "Sophie M.",
+      "text": "J'ai beaucoup apprécié l'approche personnalisée et les exercices pratiques. Je me sens plus équilibrée depuis.",
+      "service": "Énergie et Bien-être",
+      "date": "2024-02-15"
+    },
+    {
+      "id": 4,
+      "name": "Thomas B.",
+      "text": "Une séance très enrichissante qui m'a aidé à y voir plus clair dans une période difficile. Je recommande vivement.",
+      "service": "Tirage de Cartes",
+      "date": "2024-03-01"
+    }
+  ]
+} 

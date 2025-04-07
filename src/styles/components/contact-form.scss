@@ -1,0 +1,137 @@
+@use 'sass:color';
+@import '../main.scss';
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  @include card-style;
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $light-color;
+      font-weight: 500;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      background: rgba($light-color, 0.1);
+      border: 1px solid rgba($light-color, 0.2);
+      border-radius: 5px;
+      color: $light-color;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $accent-color;
+        background: rgba($light-color, 0.15);
+      }
+
+      &.error {
+        border-color: $secondary-color;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .error-message {
+      display: block;
+      color: $secondary-color;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .checkbox-group {
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      cursor: pointer;
+
+      input[type="checkbox"] {
+        width: auto;
+        margin-top: 0.3rem;
+      }
+
+      span {
+        color: $light-color;
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        a {
+          color: $accent-color;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: lighten($accent-color, 10%);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .submit-status {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out forwards;
+
+    &.success {
+      background: rgba($accent-color, 0.1);
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+
+    &.error {
+      background: rgba($secondary-color, 0.1);
+      color: $secondary-color;
+      border: 1px solid $secondary-color;
+    }
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background: $accent-color;
+    color: $dark-color;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover:not(:disabled) {
+      background: darken($accent-color, 10%);
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+} 

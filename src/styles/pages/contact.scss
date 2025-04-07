@@ -1,0 +1,81 @@
+@use 'sass:color';
+@import '../main.scss';
+
+.contact-page {
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-info {
+    background: rgba($dark-color, 0.8);
+    border: 1px solid $accent-color;
+    border-radius: 8px;
+    padding: 2rem;
+
+    h2 {
+      color: $accent-color;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: $light-color;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: $light-color;
+
+      i {
+        color: $accent-color;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 1rem 0;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .contact-content {
+      gap: 1rem;
+    }
+
+    .contact-info {
+      padding: 1.5rem;
+    }
+  }
+} 

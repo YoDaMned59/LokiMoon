@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Tirage de Cartes",
+      "description": "Une lecture personnalisée pour éclairer votre chemin",
+      "icon": "🎴",
+      "duration": "60 minutes",
+      "price": "80€",
+      "details": [
+        "Analyse approfondie de votre situation",
+        "Réponses à vos questions spécifiques",
+        "Conseils personnalisés",
+        "Support par email après la séance"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Consultation Spirituelle",
+      "description": "Un accompagnement pour votre développement personnel",
+      "icon": "✨",
+      "duration": "90 minutes",
+      "price": "120€",
+      "details": [
+        "Exploration de votre chemin spirituel",
+        "Techniques de méditation guidée",
+        "Exercices pratiques",
+        "Suivi personnalisé"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Énergie et Bien-être",
+      "description": "Des conseils pour harmoniser votre énergie",
+      "icon": "🌟",
+      "duration": "45 minutes",
+      "price": "60€",
+      "details": [
+        "Équilibrage énergétique",
+        "Techniques de relaxation",
+        "Conseils pour le quotidien",
+        "Rituels personnalisés"
+      ]
+    }
+  ]
+} 

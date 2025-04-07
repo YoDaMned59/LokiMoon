@@ -1,0 +1,77 @@
+@use 'sass:color';
+@import '../main.scss';
+
+.privacy-policy-page {
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .privacy-content {
+    background: rgba($dark-color, 0.8);
+    border: 1px solid $accent-color;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: $light-color;
+
+    h2 {
+      color: $accent-color;
+      margin: 1.5rem 0 1rem;
+      font-size: 1.5rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+
+      li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+
+        &:before {
+          content: "•";
+          color: $accent-color;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-page {
+    padding: 1rem 0;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .privacy-content {
+      padding: 1.5rem;
+    }
+  }
+} 

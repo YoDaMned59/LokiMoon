@@ -1,0 +1,130 @@
+@import '../main.scss';
+
+.testimonials-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+
+  .testimonials-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+
+    .testimonial-content {
+      @include card-style;
+      text-align: center;
+      padding: 2rem;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .testimonial-text {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: $light-color;
+      margin-bottom: 2rem;
+      font-style: italic;
+
+      &::before,
+      &::after {
+        content: '"';
+        color: $accent-color;
+        font-size: 2rem;
+        font-family: serif;
+        position: relative;
+        top: 10px;
+      }
+
+      &::before {
+        margin-right: 0.5rem;
+      }
+
+      &::after {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .testimonial-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .testimonial-author {
+      color: $accent-color;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .testimonial-service {
+      color: rgba($light-color, 0.8);
+      font-size: 0.9rem;
+    }
+
+    .testimonial-date {
+      color: rgba($light-color, 0.6);
+      font-size: 0.8rem;
+    }
+  }
+
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba($light-color, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+
+    &:hover {
+      background: rgba($light-color, 0.5);
+    }
+
+    &.active {
+      background: $accent-color;
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-slider {
+    .testimonial-card {
+      .testimonial-content {
+        padding: 1.5rem;
+      }
+
+      .testimonial-text {
+        font-size: 1rem;
+      }
+    }
+  }
+} 

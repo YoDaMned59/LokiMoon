@@ -1,0 +1,135 @@
+@import '../main.scss';
+
+.services-list {
+  padding: 2rem 0;
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .service-card {
+    @include card-style;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &.active {
+      background: linear-gradient(145deg, $primary-color, darken($primary-color, 10%));
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .service-icon {
+        font-size: 2rem;
+      }
+
+      h3 {
+        color: $accent-color;
+        margin: 0;
+        font-size: 1.5rem;
+      }
+    }
+
+    .service-description {
+      color: $light-color;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .service-details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding: 1rem 0;
+      border-top: 1px solid rgba($light-color, 0.1);
+      border-bottom: 1px solid rgba($light-color, 0.1);
+
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        .detail-label {
+          color: rgba($light-color, 0.7);
+          font-size: 0.9rem;
+        }
+
+        .detail-value {
+          color: $light-color;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .service-expanded {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba($light-color, 0.1);
+      animation: fadeIn 0.3s ease-out forwards;
+
+      h4 {
+        color: $accent-color;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+
+        li {
+          color: $light-color;
+          margin-bottom: 0.5rem;
+          padding-left: 1.5rem;
+          position: relative;
+
+          &::before {
+            content: '✓';
+            color: $accent-color;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+
+      .book-button {
+        width: 100%;
+        padding: 1rem;
+        background: $accent-color;
+        color: $text-dark;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: darken($accent-color, 10%);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services-list {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+} 
