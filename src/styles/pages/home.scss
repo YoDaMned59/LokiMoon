@@ -2,16 +2,17 @@
 @import '../main.scss';
 
 .home {
-  padding-top: 80px; // Pour compenser la navbar fixe
+  padding-top: 60px; // Réduit le padding-top
 
   .hero {
-    min-height: 90vh;
+    min-height: 60vh; // Réduit la hauteur du hero
     background: linear-gradient(rgba($background-dark, 0.8), rgba($background-dark, 0.8)),
                 url('/images/hero-bg.jpg') center/cover;
     @include flex-center;
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding: 3rem 0; // Ajoute un padding vertical
 
     &::before {
       content: '';
@@ -27,10 +28,12 @@
     .container {
       position: relative;
       z-index: 2;
+      max-width: 800px; // Limite la largeur du contenu
+      margin: 0 auto;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.5rem; // Réduit la taille du titre
       margin-bottom: 1rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -41,9 +44,122 @@
     }
 
     .subtitle {
-      font-size: 1.5rem;
+      font-size: 1.3rem; // Réduit la taille du sous-titre
       margin-bottom: 2rem;
       opacity: 0.9;
+      max-width: 600px; // Limite la largeur du texte
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      padding: 0.8rem 1.8rem; // Réduit légèrement la taille du bouton
+      font-size: 1rem;
+    }
+  }
+
+  .about-preview {
+    padding: 5rem 0;
+    background: linear-gradient(rgba($dark-color, 0.95), rgba($dark-color, 0.95)),
+                url('/images/about-bg.jpg') center/cover fixed;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      color: $accent-color;
+      @include title-decoration;
+    }
+
+    .about-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-description {
+      text-align: center;
+      font-size: 1.3rem;
+      color: $light-color;
+      margin-bottom: 3rem;
+      font-style: italic;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .about-item {
+      @include card-style;
+      text-align: left;
+
+      h3 {
+        color: $accent-color;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: left;
+
+        &:after {
+          margin: 0.8rem 0 0;
+          width: 60px;
+        }
+      }
+
+      p {
+        color: $light-color;
+        line-height: 1.8;
+      }
+    }
+
+    .about-quote {
+      text-align: center;
+      color: $accent-color;
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 3rem auto;
+      max-width: 800px;
+      position: relative;
+      padding: 2rem;
+
+      &:before,
+      &:after {
+        content: '"';
+        font-size: 4rem;
+        color: rgba($accent-color, 0.3);
+        position: absolute;
+      }
+
+      &:before {
+        top: -1rem;
+        left: 0;
+      }
+
+      &:after {
+        bottom: -2rem;
+        right: 0;
+      }
+    }
+
+    .read-more-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 1rem 2rem;
+      background-color: transparent;
+      border: 2px solid $accent-color;
+      color: $accent-color;
+      font-family: $font-title;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $accent-color;
+        color: $dark-color;
+      }
     }
   }
 
@@ -55,7 +171,7 @@
       text-align: center;
       margin-bottom: 3rem;
       font-size: 2.5rem;
-      color: $light-color;
+      color: $accent-color;
     }
 
     .features-grid {
@@ -163,13 +279,39 @@
 
 @media (max-width: 768px) {
   .home {
+    padding-top: 40px;
+    
     .hero {
+      min-height: 50vh;
+      padding: 2rem 0;
+      
       h1 {
         font-size: 2.5rem;
       }
 
       .subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    .about-preview {
+      padding: 3rem 0;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .about-description {
+        font-size: 1.1rem;
+      }
+
+      .about-quote {
         font-size: 1.2rem;
+        padding: 1.5rem;
+      }
+
+      .about-item h3 {
+        font-size: 1.3rem;
       }
     }
 

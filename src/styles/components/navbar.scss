@@ -28,7 +28,7 @@
 
   .logo {
     text-decoration: none;
-    font-family: 'Cinzel Decorative', serif;
+    font-family: $font-title;
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -46,11 +46,43 @@
       text-transform: uppercase;
     }
 
-    .logo-rune {
+    .logo-runes {
       color: $accent-color;
       font-size: 1.5rem;
       margin-left: 0.5rem;
       opacity: 0.8;
+      transition: all 0.3s ease;
+      letter-spacing: 0;
+      width: 2.5em;
+      height: 2.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $accent-color;
+      border-radius: 50%;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border: 1px solid rgba($accent-color, 0.3);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+
+        &::before {
+          transform: scale(1.1);
+          opacity: 0;
+        }
+      }
     }
   }
 
@@ -62,7 +94,7 @@
     a {
       color: $light-color;
       text-decoration: none;
-      font-family: 'Cinzel Decorative', serif;
+      font-family: $font-title;
       font-size: 1.1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -151,6 +183,16 @@
 
       a {
         font-size: 1rem;
+      }
+    }
+
+    .logo {
+      font-size: 1.5rem;
+
+      .logo-runes {
+        font-size: 1.2rem;
+        width: 2.2em;
+        height: 2.2em;
       }
     }
   }

@@ -2,45 +2,67 @@
   "services": [
     {
       "id": 1,
-      "title": "Tirage de Cartes",
-      "description": "Une lecture personnalisée pour éclairer votre chemin",
-      "icon": "🎴",
-      "duration": "60 minutes",
-      "price": "80€",
-      "details": [
-        "Analyse approfondie de votre situation",
-        "Réponses à vos questions spécifiques",
-        "Conseils personnalisés",
-        "Support par email après la séance"
-      ]
+      "icon": "✧",
+      "title": "TIRAGE ORACLES",
+      "description": "Une lecture intuitive avec les oracles pour éclairer votre chemin spirituel. Les oracles sont des outils puissants qui nous permettent de recevoir des messages clairs et précis de nos guides spirituels.",
+      "features": [
+        "Lecture personnalisée",
+        "Messages des guides spirituels",
+        "Conseils pour votre développement personnel",
+        "Éclairage sur une situation spécifique"
+      ],
+      "prerequis": {
+        "text": "Pour un tirage en ligne, il est nécessaire de fournir votre prénom et votre âge."
+      },
+      "buttonText": "RÉSERVER"
     },
     {
       "id": 2,
-      "title": "Consultation Spirituelle",
-      "description": "Un accompagnement pour votre développement personnel",
-      "icon": "✨",
-      "duration": "90 minutes",
-      "price": "120€",
-      "details": [
-        "Exploration de votre chemin spirituel",
-        "Techniques de méditation guidée",
-        "Exercices pratiques",
-        "Suivi personnalisé"
-      ]
+      "icon": "✧",
+      "title": "TIRAGE TAROT",
+      "description": "Une lecture approfondie avec le tarot pour explorer les différentes facettes de votre situation. Le tarot est un outil ancestral qui nous permet d'explorer le passé, le présent et les potentiels futurs.",
+      "features": [
+        "Analyse complète de votre situation",
+        "Exploration des différentes possibilités",
+        "Conseils pratiques et spirituels",
+        "Compréhension des enjeux actuels"
+      ],
+      "prerequis": {
+        "text": "Pour un tirage en ligne, il est nécessaire de fournir votre prénom et votre âge."
+      },
+      "buttonText": "RÉSERVER"
     },
     {
       "id": 3,
-      "title": "Énergie et Bien-être",
-      "description": "Des conseils pour harmoniser votre énergie",
-      "icon": "🌟",
-      "duration": "45 minutes",
-      "price": "60€",
-      "details": [
-        "Équilibrage énergétique",
-        "Techniques de relaxation",
-        "Conseils pour le quotidien",
-        "Rituels personnalisés"
-      ]
+      "icon": "✧",
+      "title": "TIRAGE GÉNÉRAL",
+      "description": "Une lecture globale qui aborde les différents aspects de votre vie. Ce tirage permet d'avoir une vision d'ensemble de votre situation et d'identifier les domaines qui nécessitent votre attention.",
+      "features": [
+        "Vision globale de votre situation",
+        "Identification des domaines prioritaires",
+        "Conseils pour l'avenir",
+        "Points d'attention particuliers"
+      ],
+      "prerequis": {
+        "text": "Pour un tirage en ligne, il est nécessaire de fournir votre prénom et votre âge."
+      },
+      "buttonText": "RÉSERVER"
+    },
+    {
+      "id": 4,
+      "icon": "✧",
+      "title": "MESSAGE DES GUIDES",
+      "description": "Une communication directe avec vos guides spirituels pour recevoir leurs messages et conseils. Cette séance permet d'établir un lien profond avec votre équipe spirituelle et de recevoir leur guidance.",
+      "features": [
+        "Communication directe avec vos guides",
+        "Messages personnalisés",
+        "Conseils spirituels",
+        "Support dans votre développement personnel"
+      ],
+      "prerequis": {
+        "text": "Pour un tirage en ligne, il est nécessaire de fournir votre prénom et votre âge."
+      },
+      "buttonText": "RÉSERVER"
     }
   ]
 } 

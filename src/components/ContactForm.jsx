@@ -97,7 +97,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" id="contact-form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="name">Nom complet *</label>
         <input

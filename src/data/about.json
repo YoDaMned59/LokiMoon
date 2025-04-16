@@ -1,0 +1,25 @@
+{
+  "about": {
+    "title": "Qui suis-je",
+    "description": "À travers les mystères des cartes, je vous guide vers votre voie",
+    "content": [
+      {
+        "id": 1,
+        "title": "Mon Parcours",
+        "text": "Passionnée par les arts divinatoires depuis mon plus jeune âge, j'ai développé mes dons de voyance et de lecture des cartes au fil des années. Mon approche unique combine la sagesse ancestrale avec une compréhension moderne des besoins spirituels."
+      },
+      {
+        "id": 2,
+        "title": "Ma Vision",
+        "text": "Je crois en une guidance bienveillante et éclairée. Mon rôle est de vous aider à découvrir votre chemin, à comprendre les messages de vos guides spirituels et à révéler votre potentiel caché."
+      },
+      {
+        "id": 3,
+        "title": "Mon Engagement",
+        "text": "Chaque consultation est unique et personnalisée. Je m'engage à vous offrir une lecture authentique et sincère, dans le respect de votre cheminement personnel et de votre libre arbitre."
+      }
+    ],
+    "image": "/images/profile.jpg",
+    "quote": "Mon objectif est de vous guider vers la lumière qui brille en vous"
+  }
+} 

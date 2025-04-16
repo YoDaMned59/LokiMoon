@@ -1,84 +1,150 @@
-@use 'sass:color';
 @import '../main.scss';
 
 .services-page {
-  padding: 2rem 0;
-  min-height: calc(100vh - 200px);
+  padding: 0;
+  min-height: 100vh;
+  background-color: $dark-color;
 
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
-  }
+    padding: 2rem;
 
-  h1 {
-    text-align: center;
-    color: $primary-color;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+    h1 {
+      font-size: 3.5rem;
+      margin: 4rem 0 3rem;
+      color: $accent-color;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 0.1em;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 180px;
+        height: 3px;
+        background: linear-gradient(to right, transparent, $accent-color, transparent);
+        margin: 1.5rem auto 0;
+      }
+    }
   }
 
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   .service-card {
-    background: rgba($dark-color, 0.8);
-    border: 1px solid $accent-color;
-    border-radius: 8px;
-    padding: 2rem;
-    transition: transform 0.3s ease;
+    @include card-style;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 650px;
+    background-color: $dark-color;
 
-    &:hover {
-      transform: translateY(-5px);
+    .service-title {
+      color: #c4a747;
+      font-family: $font-title;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: 0.1em;
+      line-height: 1.2;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 2px;
+        background-color: #c4a747;
+        margin: 1rem auto 0;
+      }
     }
 
-    h2 {
-      color: $accent-color;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    p {
-      color: $light-color;
-      margin-bottom: 1.5rem;
+    .service-description {
+      color: $text-color;
+      font-family: $font-main;
+      font-size: 1rem;
       line-height: 1.6;
+      margin-bottom: 2.5rem;
+      text-align: justify;
+      padding: 0 0.5rem;
     }
 
-    ul {
+    .service-features {
       list-style: none;
-      padding: 0;
+      padding: 0 1rem;
+      margin-bottom: 2.5rem;
 
       li {
-        color: $light-color;
-        margin-bottom: 0.5rem;
-        padding-left: 1.5rem;
-        position: relative;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.4;
+        font-family: $font-main;
+        color: $text-color;
 
-        &:before {
-          content: "•";
+        .feature-icon {
           color: $accent-color;
-          position: absolute;
-          left: 0;
+          margin-right: 1rem;
+          font-size: 1rem;
         }
       }
+    }
+
+    .prerequis {
+      font-family: $font-main;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 2rem;
+      font-style: italic;
+      color: $text-color;
+      padding: 0 1rem;
+    }
+
+    .reserve-button {
+      font-family: $font-title;
+      font-size: 1.4rem;
+      padding: 1rem;
+      letter-spacing: 0.1em;
+      border-radius: 0;
+      background-color: $accent-color;
+      color: $dark-color;
+      margin: 0 1rem;
     }
   }
 }
 
 @media (max-width: 768px) {
   .services-page {
-    padding: 1rem 0;
+    .container {
+      padding: 1rem;
 
-    h1 {
-      font-size: 2rem;
+      h1 {
+        font-size: 2.8rem;
+        margin: 3rem 0 2rem;
+      }
     }
 
-    .services-grid {
-      grid-template-columns: 1fr;
+    .service-card {
+      padding: 2rem 1.5rem;
+      min-height: auto;
+
+      .service-title {
+        font-size: 2rem;
+      }
+
+      .service-description {
+        font-size: 0.95rem;
+      }
+
+      .service-features li {
+        font-size: 0.95rem;
+      }
     }
   }
 } 

@@ -1,8 +1,41 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import '../styles/components/footer.scss'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const location = useLocation()
+
+  // Fonction pour faire défiler vers la section "Qui suis-je"
+  const scrollToAboutSection = () => {
+    setTimeout(() => {
+      const aboutSection = document.getElementById('about-section')
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100) // Petit délai pour s'assurer que la page est chargée
+  }
+
+  // Vérifie si nous venons d'une autre page et que nous sommes sur la page d'accueil
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash === '#about-section') {
+      scrollToAboutSection()
+    }
+  }, [location])
+
+  const handleQuiSuisJeClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault()
+      scrollToAboutSection()
+    }
+  }
+
+  const handleContactClick = (e) => {
+    if (location.pathname === '/contact') {
+      e.preventDefault()
+      document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <footer className="footer">
@@ -27,10 +60,18 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Navigation</h3>
             <ul>
-              <li><Link to="/">Accueil</Link></li>
+              <li>
+                <Link to="/#about-section" onClick={handleQuiSuisJeClick}>
+                  Qui suis-je
+                </Link>
+              </li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/about">À propos</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li>
+                <Link to="/contact#contact-form" onClick={handleContactClick}>
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
