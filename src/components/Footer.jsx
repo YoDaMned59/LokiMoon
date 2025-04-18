@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Loki Cards</h3>
+            <h3>LokiMoon</h3>
             <p>Votre guide spirituel pour éclairer votre chemin</p>
             <div className="social-links">
               <a href="#" aria-label="Facebook">
